@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.Accueil{
+  background-image: url(./img/Accueil.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Map{
+  background-image: url(./img/Map.jpg);
+  background-size :100% 100%;
+  background-repeat: no-repeat;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Blog{
+  background-image: url(./img/Blog.jpg);
+  background-size :100% 100%;
+  background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-family: 'DM Serif Text', serif;
+}
+h4{
+  margin-top: 1rem;
+  font-family: 'DM Serif Text', serif;
+}
+h3{
+  margin-top: 22.5%;
+  font-family: 'DM Serif Text', serif;
+}
+p{
+  font-family: 'Open Sans' sans-serif;
+}
+ul{
+  width: 100%;
+}
+.brand{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.shop{
+  display: flex;
+  justify-content: end;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-light{
+  background:white !important;
+  opacity: 75%;
+}
+.trans{
+  background-color: rgba(255, 255, 255, 0.500);
+  padding: 5rem;
+  padding-bottom: 7rem;
+}
+.container{
+    max-width: 1500px;
+}
+.footer{
+  font-size: 65%;
+  color: rgba(0, 0, 0, 0.613);
+}
+.leaflet-container{
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.card-img-top{
+  min-height: 30rem !important;
+  max-height: 30rem !important;
+}
+.card{
+  min-height: 42rem !important;
+  max-height: 42rem !important;
+  margin: 2rem !important;
 }
