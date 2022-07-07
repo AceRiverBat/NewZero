@@ -4,16 +4,43 @@
   background-repeat: no-repeat;
 }
 .Map{
-  background-image: url(./img/Map.jpg);
+  background-image: url(./img/testmap.jpg);
   background-size :100% 100%;
   background-repeat: no-repeat;
+}
+.active{
+  font-weight: bold !important;
 }
 .Blog{
-  background-image: url(./img/Blog.jpg);
+  background-image: url(./img/test.jpg);
   background-size :100% 100%;
   background-repeat: no-repeat;
 }
+.btn-dark{
+  background-color: #637A64 !important;
+  border: #637A64 !important;
+}
+.btn-dark:hover{
+  background-color: #637a64d4 !important;
+  border: #637a64d4 !important;
+}
+.textcenter{
+  text-align: center;
+}
+.bgBlog{
+ background-color: #bdafa2 !important;
+ padding: 1rem;
+ margin-top: 1rem;
+}
+.navarr{
+  display: flex;
+  justify-content: center !important;
+  margin-top: 1rem !important;
+}
 h1{
+  font-family: 'DM Serif Text', serif;
+}
+h2{
   font-family: 'DM Serif Text', serif;
 }
 h4{
@@ -33,6 +60,7 @@ ul{
 .brand{
   display: flex;
   justify-content: center;
+  margin-left: 17%;
 }
 .shop{
   display: flex;
@@ -60,12 +88,68 @@ ul{
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-.card-img-top{
-  min-height: 30rem !important;
-  max-height: 30rem !important;
-}
 .card{
-  min-height: 42rem !important;
-  max-height: 42rem !important;
+  min-height: 35rem !important;
+  max-height: 35rem !important;
   margin: 2rem !important;
+}
+.arrondissement:hover{
+  text-decoration-line: underline;
+  color: #637A64 !important;
+}
+.nav-link:hover{
+  color: #637A64 !important;
+}
+.btn-outline-dark:hover{
+  background-color: #637A64 !important;
+  border: #637A64 !important;
+}
+.btn-outline-light:hover{
+  opacity: 75%;
+}
+.center{
+  margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  .shop{
+    display: flex;
+    justify-content: center;
+    margin-top: -0.5rem;
+  }
+  .brand{
+    display: flex;
+      justify-content: center;
+      margin-left: 25%;
+  }
+}
+@media (max-width: 300px) {
+  .shop{
+      display: flex;
+      justify-content: center;
+      margin-top: -0.5rem;
+  }
+}
+@media (width: 768px) {
+  .shop{
+      display: flex;
+      justify-content: center;
+      margin-top: -0.5rem;
+  }
+  .brand{
+    display: flex;
+      justify-content: center;
+      margin-left: 35%;
+  }
+}
+@media (width: 820px) {
+  .shop{
+      display: flex;
+      justify-content: center;
+      margin-top: -0.5rem;
+  }
+  .brand{
+    display: flex;
+      justify-content: center;
+      margin-left: 35%;
+  }
 }

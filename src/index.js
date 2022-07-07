@@ -13,7 +13,6 @@ import Lyon6 from './pages/arrondissements/Lyon6';
 import Lyon7 from './pages/arrondissements/Lyon7';
 import Lyon8 from './pages/arrondissements/Lyon8';
 import Lyon9 from './pages/arrondissements/Lyon9';
-import Article from './components/article';
 import reportWebVitals from './reportWebVitals';
 import { render } from "react-dom";
 import {
@@ -38,7 +37,6 @@ root.render(
       <Route path="Lyon7" element={<Lyon7 />} />
       <Route path="Lyon8" element={<Lyon8 />} />
       <Route path="Lyon9" element={<Lyon9 />} />
-      <Route path="blog/:id" element={<Article />} />
     </Routes>
   </BrowserRouter>,
 );

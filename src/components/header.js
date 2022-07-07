@@ -10,23 +10,24 @@ export default function header() {
           <div class="collapse navbar-collapse line" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <li class="nav-item">
-              <Link class="nav-link active" to="/map">Tous les composts</Link>
+                <Link class="nav-link active" to="/map"><p>Tous les composts</p></Link>
               </li>
               <li class="nav-item">
-              <Link class="nav-link active" to="/blog">Blog</Link>
-              </li>
-              </ul>
-              <ul class="navbar-nav brand">
-                <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/"><h1>NEWZERO Lyon</h1></Link>
-              </li>
-              </ul>
-                <ul class="navbar-nav shop">
-              <li class="nav-item">
-                <a class="nav-link active" href="#"><button type="button" class="btn btn-outline-dark">Shop</button></a>
+                <Link class="nav-link active" to="/blog"><p>Les Associations</p></Link>
               </li>
             </ul>
+
           </div>
+          <ul class="navbar-nav brand">
+            <li class="nav-item">
+              <Link class="nav-link active" aria-current="page" to="/"><h1>NEWZERO Lyon</h1></Link>
+            </li>
+          </ul>
+          <ul class="navbar-nav shop">
+            <li class="nav-item">
+              <a class="nav-link active shop" href="http://127.0.0.1:8002"><button type="button" class="btn btn-outline-dark">Shop</button></a>
+            </li>
+          </ul>
         </div>
       </nav>
       <Outlet />

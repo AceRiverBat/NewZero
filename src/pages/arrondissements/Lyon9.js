@@ -5,6 +5,7 @@ import Footer from '../../components/footer';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import { render } from '@testing-library/react';
+import Navbar from '../../components/navbar'
 
 class Map extends Component {
 
@@ -16,7 +17,7 @@ class Map extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/compost')
+        fetch('http://127.0.0.1:8001/compost')
             .then(response => response.json())
             .then(data => this.setState({ composts: data }));
     }
@@ -26,10 +27,22 @@ class Map extends Component {
             <div className='Map'>
                 <Header />
                 <div class="container">
+                <div className='container'>
+                        <div className='row'>
+                            <div className="col-md-2 col-12 col-lg-2">
+                            </div>
+                            <div className="col-md-8 col-12 col-lg-8 bgBlog">
+                                <h1 className='textcenter'>Lyon 9</h1>
+                                <div className='navarr'>
+                                <Navbar />
+                            </div>
+                            </div>
+                            <div className="col-md-2 col-12 col-lg-2">
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12 col-12 col-lg-12">
-                            <br />
-                            <h1>Lyon 9 :</h1>
                             <MapContainer center={[45.7834732,4.8073066]} zoom={15} scrollWheelZoom={false}>
                                 <TileLayer
                                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

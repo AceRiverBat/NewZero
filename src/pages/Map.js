@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import { render } from '@testing-library/react';
+import Navbar from '../components/navbar'
 import { Outlet, Link } from "react-router-dom";
 
 class Map extends Component {
@@ -17,7 +18,7 @@ class Map extends Component {
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:8000/compost')
+    fetch('http://127.0.0.1:8001/compost')
       .then(response => response.json())
       .then(data => this.setState({ composts: data }));
   }
@@ -27,10 +28,24 @@ class Map extends Component {
       <div className='Map'>
         <Header />
         <div class="container">
+          <div className='container'>
+            <div className='row'>
+              <div className="col-md-2 col-12 col-lg-2">
+              </div>
+              <div className="col-md-8 col-12 col-lg-8 bgBlog">
+                <h1 className='textcenter'>Tous les composts collectifs de Lyon</h1>
+
+                <p className='textcenter'>Sélectionnez votre arrondissement et regardez le compost collectif le plus proche de vous :</p>
+                <div className='navarr'>
+              <Navbar />
+              </div>
+              </div>
+              <div className="col-md-2 col-12 col-lg-2">
+              </div>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-md-6 col-12 col-lg-6">
-              <br />
-              <h1>TOUS LES COMPOSTS COLLECTIFS DE LYON :</h1>
+            <div class="col-md-12 col-12 col-lg-12">
               <MapContainer center={[45.75960601090755, 4.832381729701485]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -48,48 +63,9 @@ class Map extends Component {
                 ))}
               </MapContainer>
             </div>
-            <div class="col-md-6 col-12 col-lg-6">
-              <h3>Sélectionner votre arrondissement :</h3>
-              <div class=" d-flex align-items-center col-md-6 col-12 col-lg-6">
 
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon1">Lyon1</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon2">Lyon2</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon3">Lyon3</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon4">Lyon4</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon5">Lyon5</Link>
-                  </li>
-                </ul>
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon6">Lyon6</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon7">Lyon7</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon8">Lyon8</Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link class="nav-link active" to="/Lyon9">Lyon9</Link>
-                  </li>
-
-                </ul>
-
-              </div>
-            </div>
           </div>
         </div>
-
         <Footer />
         <Outlet />
       </div>
